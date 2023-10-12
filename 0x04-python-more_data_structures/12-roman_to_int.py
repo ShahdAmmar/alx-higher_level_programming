@@ -11,4 +11,3 @@ def roman_to_int(roman_string):
         num = digits[c]
         total_num += num if total_num < num * 5 else -num
     return total_num
-
