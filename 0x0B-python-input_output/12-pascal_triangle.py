@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ defining pascal_triangle function """
 
+
 def pascal_triangle(n):
     """ represent pascal's triangles """
     if n <= 0:
