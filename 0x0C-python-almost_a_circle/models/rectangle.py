@@ -7,6 +7,7 @@ class Rectangle(Base):
     """ defining rectangle class """
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """ Intialization """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -21,7 +22,7 @@ class Rectangle(Base):
         @width.setter
         def width(self, value):
             """ width setter """
-            validate_number("width", value, False)
+            self.validate_number("width", value, False)
             self.__width = value
 
         @property
@@ -32,7 +33,7 @@ class Rectangle(Base):
         @height.setter
         def height(self, value):
             """ height setter """
-            validate_number("height", value, False)
+            self.validate_number("height", value, False)
             self.__height = value
 
         @property
@@ -43,7 +44,7 @@ class Rectangle(Base):
         @x.setter
         def x(self, value):
             """ x setter """
-            validate_number("x", value)
+            self.validate_number("x", value)
             self.__x = value
 
         @property
@@ -54,11 +55,12 @@ class Rectangle(Base):
         @y.setter
         def y(self, value):
             """ y setter """
-            validate_number("y", value)
+            self.validate_number("y", value)
             self.__y = value
 
-        def validate_number(self, attrb, value, xy = True):
-            if type(value) is not int:
+        def validate_number(self, attrb, value, xy=True):
+            """ checks if value is valid or not """
+            if type(value) != int:
                 raise TypeError("{} must be an integer".format(attrb))
             elif xy and value < 0:
                 raise ValueError("{} must be >= 0".format(attrb))
