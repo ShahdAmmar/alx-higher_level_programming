@@ -74,5 +74,5 @@ class Rectangle(Base):
     def display(self):
         """ display rectangle """
         r = '\n' * self.y + \
-                (' ' * self.x + '#' * self.width + '\n') * self.height
+            (' ' * self.x + '#' * self.width + '\n') * self.height
         print(r, end='')
