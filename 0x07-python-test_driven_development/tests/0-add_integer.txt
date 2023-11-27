@@ -1,92 +1,87 @@
-The ''0-add_integer'' module
-============================
-Using ''add_integer''
-----------------------------
-
 Import function from module:
     >>> add_integer = __import__('0-add_integer').add_integer
 
-Test one int argument:
-    >>> add_integer(4)
-    102
+one int argument:
+    >>> add_integer(6)
+    104
 
-Test one int argument and check default second:
+one int argument and check default second:
     >>> add_integer(0)
     98
 
-Test one float:
-    >>> add_integer(123.9)
-    221
+one float:
+    >>> add_integer(128.9)
+    226
 
-Test one negative float:
+one negative float:
     >>> add_integer(-95.5)
     3
+    
+two integers:
+    >>> add_integer(300, 5)
+    305
 
-Test two integers:
-    >>> add_integer(200, 5)
-    205
-
-Test two big integers:
+two big integers:
     >>> add_integer(999999998, 999999999)
     1999999997
 
-Test positive, negative integers:
+positive, negative integers:
     >>> add_integer(34263478, -89234582395)
     -89200318917
 
-Test negative, positive integers:
+negative, positive integers:
     >>> add_integer(-13947692, 57234)
     -13890458
 
-Test an integer and a float:
-    >>> add_integer(125, 7.987)
-    132
+an integer and a float:
+    >>> add_integer(125, 8.987)
+    133
 
-Test a float and an integer:
+a float and an integer:
     >>> add_integer(234234.43545, 4352345)
     4586579
 
-Test two floats:
+two floats:
     >>> add_integer(0.8, 0.8)
     0
 
-Add infinity:
+infinity:
     >>> add_integer(float('inf'), float('-inf'))
     Traceback (most recent call last):
     ...
     OverflowError: cannot convert float infinity to integer
 
-Add nan:
+nan:
     >>> add_integer(0, float('nan'))
     Traceback (most recent call last):
     ...
     ValueError: cannot convert float NaN to integer
 
-Test first arg invalid:
+first arg invalid:
     >>> add_integer("foo", 0)
     Traceback (most recent call last):
         ...
     TypeError: a must be an integer
 
-Test second arg invalid:
+second arg invalid:
     >>> add_integer(123123, [])
     Traceback (most recent call last):
         ...
     TypeError: b must be an integer
 
-Test both args invalid:
+both args invalid:
     >>> add_integer(None, None)
     Traceback (most recent call last):
         ...
     TypeError: a must be an integer
 
-Test two strings:
+two strings:
     >>> add_integer("foo", "bar")
     Traceback (most recent call last):
         ...
     TypeError: a must be an integer
 
-Test float overflow:
+float overflow:
     >>> add_integer(float('inf'), 0)
     Traceback (most recent call last):
     ...
