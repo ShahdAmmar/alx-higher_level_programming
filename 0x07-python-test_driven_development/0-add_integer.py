@@ -3,13 +3,15 @@
 def add_integer(a, b=98):
     """
     add 2 integers
-    Args: a, b
+    Args: 
+        a: 1st int
+        b: 2nd int
     Raises: TypeError
     Returns: sum of 2 integers
     """
-    if type(a) not in (int, float):
+    if type(a) not in [int, float]:
         raise TypeError('a must be an integer')
-    if type(b) not in (int, float):
+    if type(b) not in [int, float]:
         raise TypeError('b must be an integer')
     return (int(a) + int(b))
 
