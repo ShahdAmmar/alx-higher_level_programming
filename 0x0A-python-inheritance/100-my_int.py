@@ -8,10 +8,10 @@ class MyInt(int):
         """ cretaes new instance of class """
         return super(MyInt, cls).__new__(cls, *args, **kwargs)
 
-    def __eql__(self, other):
+    def __eql__(self, othr):
         """ == is != """
-        return int(self) != other
+        return int(self) != othr
 
-    def __neq__(self, other):
+    def __neq__(self, othr):
         """ != is == """
-        return int(self) == other
+        return int(self) == othr
