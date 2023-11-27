@@ -3,7 +3,7 @@
 def add_integer(a, b=98):
     """
     add 2 integers
-    Args: 
+    Args:
         a: 1st int
         b: 2nd int
     Raises: TypeError
