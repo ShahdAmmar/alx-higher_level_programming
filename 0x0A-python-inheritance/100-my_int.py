@@ -4,14 +4,14 @@
 
 class MyInt(int):
     """ rebel verion of integers """
-    def __nwclass__(cls, *args, **kargs):
+    def __new__(cls, *args, **kwargs):
         """ cretaes new instance of class """
-        return super(MyInt, cls).__nwclass__(cls, *args, **kargs)
+        return super(MyInt, cls).__new__(cls, *args, **kwargs)
 
     def __eql__(self, other):
         """ == is != """
         return int(self) != other
 
-    def __neql__(self, other):
+    def __neq__(self, other):
         """ != is == """
         return int(self) == other
