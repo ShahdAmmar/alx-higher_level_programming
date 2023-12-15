@@ -1,2 +1,3 @@
--- list score and name
-SELECT score, name FROM second_tbale HAVING name IS NOT NULL ORDER BY score DESC;
+-- list score and name if name not equl NULL
+
+SELECT score, name FROM second_tbale WHERE name !='' ORDER BY score DESC;
