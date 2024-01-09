@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const argvlst = process.argv
+const argvlst = process.argv;
 
 if (argvlst[2]) {
 	console.log(argvlst[2]);
