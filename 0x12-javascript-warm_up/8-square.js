@@ -3,10 +3,10 @@
 const size = parseInt(process.argv[2]);
 x = 'X';
 
-if (size) {
+if (isNaN(size)) {
+  console.log('Missing size');
+} else {
   for (let i = 0; i < size; i++) {
     console.log(x.repeat(size));
-    }
-} else {
-  console.log('Missing size');
+  }
 }
