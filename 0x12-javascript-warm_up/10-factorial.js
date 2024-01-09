@@ -9,6 +9,7 @@ function factorial (num) {
     return num * factorial(num - 1);
   }
 }
+
 const arg1 = parseInt(process.argv[2]);
-const fac = factorial(arg1);
-console.log(fac);
+
+console.log(factorial(arg1));
